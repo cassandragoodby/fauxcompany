@@ -642,21 +642,29 @@ textarea {
     page-break-after: avoid;
   }
 }
-.icon-sprite, .icon-avocadolg, .icon-avoiconfooter, .icon-avoiconheader {
-  background-image: url('../img/icon-sd1b666fb72.png');
+.icon-sprite, .icon-avoback, .icon-avocadolg, .icon-avoiconfooter, .icon-avoiconheader, .icon-california {
+  background-image: url('../img/icon-sbce1b24018.png');
   background-repeat: no-repeat;
 }
 
-.icon-avocadolg {
+.icon-avoback {
   background-position: 0 0;
 }
 
+.icon-avocadolg {
+  background-position: 0 -1280px;
+}
+
 .icon-avoiconfooter {
-  background-position: 0 -1000px;
+  background-position: 0 -2560px;
 }
 
 .icon-avoiconheader {
-  background-position: 0 -1050px;
+  background-position: 0 -2610px;
+}
+
+.icon-california {
+  background-position: 0 -2710px;
 }
 
 header {
@@ -671,20 +679,10 @@ html {
   background-color: #FAFCF1;
 }
 
-.aboutbg {
-  background: url("../img/avobg.png") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 nav {
   font-family: "Abel", sans-serif;
   padding-top: 10px;
   font-size: 1.3em;
-  background-color: #FAFCF1;
-  opacity: 0.8;
 }
 
 a {
@@ -723,8 +721,16 @@ ul li a span {
 
 .container {
   width: 85%;
+  max-width: 700px;
   margin: 0 auto;
   padding-bottom: 100px;
+  text-align: center;
+}
+
+.clearfix:after {
+  display: table;
+  content: " ";
+  clear: both;
 }
 
 .twocolumn section {
@@ -737,6 +743,16 @@ ul li a span {
 
 .right {
   float: right;
+}
+
+.threecolumn section {
+  width: 32%;
+  margin-right: 2%;
+  float: left;
+}
+
+.threecolumn section:nth-of-type(3n) {
+  margin-right: 0;
 }
 
 footer {
@@ -779,16 +795,38 @@ p {
   opacity: 0.9;
 }
 
+#avocadopic {
+  width: 100%;
+  max-width: 300px;
+}
+
+.picturediv {
+  text-align: center;
+}
+
+#calipic {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+@media only screen and (min-width: 900px) {
+  .container {
+    width: 85%;
+    max-width: 700px;
+  }
+}
 /*media query block small mobile*/
 @media only screen and (max-width: 480px) {
   .twocolumn section {
     width: 100%;
     float: none;
+    text-align: center;
   }
 
   .avoicon {
-    margin-left: 50px;
     margin-right: 50px;
+    margin-left: 50px;
   }
 
   footer {

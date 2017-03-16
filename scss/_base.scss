@@ -13,20 +13,11 @@ html{
 	 background-color: #FAFCF1;
 }
 
-.aboutbg{
-	background: url("../img/avobg.png") no-repeat center center fixed; 
-  	   -webkit-background-size: cover;
-  	   -moz-background-size: cover;
-  	   -o-background-size: cover;
-  	   background-size: cover;
-}
-
 nav{
 	font-family: $navfont;
 	padding-top: 10px;
 	font-size: 1.3em;
-	background-color: #FAFCF1;
-	opacity: 0.8;
+	// background-color: #FAFCF1;
 }
 
 a{
@@ -68,8 +59,16 @@ ul{
 
 .container {
 	width: 85%;
+	max-width: 700px;
 	margin: 0 auto;
 	padding-bottom: 100px;
+	text-align: center;
+}
+
+.clearfix:after{
+	display: table;
+	content: " ";
+	clear: both;
 }
 
 .twocolumn section{
@@ -82,6 +81,16 @@ ul{
 
 .right{
 	float: right;
+}
+
+.threecolumn section{
+	width: 32%;
+	margin-right: 2%;
+	float:left;
+}
+
+.threecolumn section:nth-of-type(3n){
+	margin-right: 0;
 }
 
 footer{
@@ -124,17 +133,45 @@ p{
     opacity: 0.9;
 }
 
+#avocadopic{
+	width: 100%;
+	max-width: 300px;
+}
+
+.picturediv{
+	text-align: center;
+}
+
+#calipic{
+	width: 100%;
+	max-width: 400px;
+	margin: auto;
+}
+
+@media only screen and (min-width: 900px){
+	#avocadopic{
+		 // margin-left: 50px;
+	}
+
+	.container{
+		width: 85%;
+		max-width: 700px;
+	}
+}
+
 /*media query block small mobile*/
 @media only screen and (max-width: 480px){
 	.twocolumn section{
 		width: 100%;
 		float: none;
+		@include centerit;
 	}
 
 	.avoicon{
-	margin-left: 50px;
-	margin-right: 50px;
-}
+		margin-right: 50px;
+		margin-left: 50px;
+	}
+
 
 	footer{
 		position: fixed;
