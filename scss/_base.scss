@@ -1,3 +1,6 @@
+ @import 'icon/*.png';
+ @include all-icon-sprites;
+
 header {
 	top: 0;
 	margin: 0;
@@ -7,5 +10,138 @@ header {
 }
 
 html{
-	 background-color: #fdfd96;
+	 background-color: #FAFCF1;
+}
+
+.aboutbg{
+	background: url("../img/avobg.png") no-repeat center center fixed; 
+  	   -webkit-background-size: cover;
+  	   -moz-background-size: cover;
+  	   -o-background-size: cover;
+  	   background-size: cover;
+}
+
+nav{
+	font-family: $navfont;
+	padding-top: 10px;
+	font-size: 1.3em;
+	background-color: #FAFCF1;
+	opacity: 0.8;
+}
+
+a{
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #34753C;
+}
+
+ul{
+	width: 100%;
+	@include centerit;
+	padding-left: 0px;
+
+	text-decoration: none;
+	li{
+		 list-style: none;
+		 display: inline-block;
+		 padding: 10px;
+		a{
+			 display: inline-block;
+			 width: 100px;
+			 height: 100px;
+			// zoom:.5;
+			span{
+				 position: absolute;
+				
+			}//span
+		}//a
+	} //li
+} //ul
+
+.avoicon{
+	margin-left: 80px;
+	margin-right: 80px;
+}
+
+.container {
+	width: 85%;
+	margin: 0 auto;
+	padding-bottom: 100px;
+}
+
+.twocolumn section{
+	width: 45%;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+footer{
+	background-color: #EDF881;
+	height: 60px;
+	padding-bottom: 10px;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+}
+
+#madeby{
+	font-family: $navfont;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	padding-right: 10px;
+	margin-bottom: 5px;
+	font-size: .8em;
+	color: #5E5E5E;
+}
+
+#madeby:hover{
+	color: #34753C;
+}
+
+#avofooter{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+p{
+	background-color: #FFFFFF;
+	border-radius: 10px;
+    border: 2px solid #73AD21;
+    padding: 10px; 
+    opacity: 0.9;
+}
+
+/*media query block small mobile*/
+@media only screen and (max-width: 480px){
+	.twocolumn section{
+		width: 100%;
+		float: none;
+	}
+
+	.avoicon{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+	footer{
+		position: fixed;
+		bottom: 0px;
+	}
+
+	#madeby{
+		position: fixed;
+	}
 }
